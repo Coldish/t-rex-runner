@@ -804,7 +804,7 @@
             if (!this.crashed) {
                 this.playing = true;
                 this.paused = false;
-                this.tRex.update(0, Trex.status.RUNNING);
+                this.tRex.update(0, Trex.status.JUMPING);
                 this.time = getTimeStamp();
                 this.update();
             }
