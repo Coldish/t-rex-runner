@@ -15,6 +15,26 @@
         // Singleton
         if (Runner.instance_) {
             return Runner.instance_;
+            /** bot
+           */
+            document.getElementById("botStatus").addEventListener("change", function() {
+	if (this.checked === true) {
+		// Activate bot
+		var INTERVAL = 2;
+		window.tRexBot = setInterval(function() {
+		    var tRex = Runner.instance_.tRex;
+		    var obstacles = Runner.instance_.horizon.obstacles;
+		    if tRex.playingIntro = false;
+		        tRex.startJump();
+		    }
+		}, INTERVAL);
+	}
+	else {
+		// Disable bot
+		clearInterval(tRexBot);
+	}
+});
+            /** bot end /*
         }
         Runner.instance_ = this;
 
